@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensePro.Pages.LoginPage"
+             Title="LoginPage">
+    <StackLayout VerticalOptions="Center" Spacing="20" Margin="20,0,20,0">
+        <Image Source="money.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" />
+         <Label
+                x:Name="Test"
+                Text="MoneyPro"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+        <Label
+            Text="Hi, User"
+            FontSize="Small"
+            HorizontalOptions="Center" />
+        <Entry x:Name="EntEmail" Placeholder="Email" />
+        <Entry x:Name="EntPassword" Placeholder="Password" IsPassword="False" />
+        <Button x:Name="BtnLogin" Text="Login" HeightRequest="50" FontSize="Medium" Clicked="LoginBtn_Clicked"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="New user? " FontSize="Micro" HorizontalOptions="Center" />
+            <Label Text="Register" FontSize="Micro" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapRegister" Tapped="TapRegister_Tapped"/>
+            </HorizontalStackLayout.GestureRecognizers>
+        </HorizontalStackLayout>
+    </StackLayout>
+</ContentPage>

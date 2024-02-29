@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensePro.Pages.HomePage"
+             Title="HomePage">
+    <Grid Margin="20" RowSpacing="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <VerticalStackLayout Grid.Row="0" Spacing="5" Margin="0,20,0,0">
+            <Label x:Name="userName" FontSize="38" Text="Hi, User" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+        <Frame Grid.Row="1" Padding="15">
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Click to know you total expense" FontSize="Medium" FontAttributes="Bold" />
+                <Label x:Name="totalExpanse" FontSize="Large" Text="$--" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Grid Grid.Row="2" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="175" />
+                <ColumnDefinition Width="175" />
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Row="0" Grid.Column="0">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="20">
+                    <Image Source="transport.png" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="Travel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapCategory1" Tapped="TapCategory1_Tapped" CommandParameter="transport"/>
+                </Frame.GestureRecognizers>
+             </Frame>
+            <Frame Grid.Row="0" Grid.Column="1">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="20">
+                    <Image Source="entertainment.png" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="Entertainment" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapCategory2" Tapped="TapCategory1_Tapped" CommandParameter="entertainment"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="0">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="20">
+                    <Image Source="food.png" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="Food" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapCategory3" Tapped="TapCategory1_Tapped" CommandParameter="food"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="1">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="20">
+                    <Image Source="shopping.png" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"/>
+                    <Label Text="Shopping" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapCategory4" Tapped="TapCategory1_Tapped" CommandParameter="shopping"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

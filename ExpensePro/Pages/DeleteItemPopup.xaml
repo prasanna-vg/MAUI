@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ExpensePro.Pages.DeleteItemPopup"
+             CanBeDismissedByTappingOutsideOfPopup="False">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label
+            x:Name="CategoryName"
+            Text="Click to delete"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="DeletBtn" BackgroundColor="White" Padding="10,4,10,4" Text="Delete" Clicked="DeletBtn_Clicked" TextColor="Black" Margin="10"/>
+            <Button Grid.Column="1" x:Name="CancelBtn" BackgroundColor="Black" Padding="10,4,10,4" Text="Cancel" Clicked="CancelBtn_Clicked" TextColor="White" Margin="10"/>
+        </Grid>
+    </VerticalStackLayout>
+</toolkit:Popup>
+

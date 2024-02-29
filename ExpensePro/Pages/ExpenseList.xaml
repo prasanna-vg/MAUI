@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensePro.Pages.ExpenseList"
+             Title="ExpenseList">
+    <Grid Padding="10">
+        <ScrollView>
+            <VerticalStackLayout>
+                <ListView x:Name="ListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!--<Frame>
+                                    <Grid Grid.Column="2" HorizontalOptions="CenterAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Text="{Binding category}" TextColor="Black" FontAttributes="Bold" HeightRequest="50" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="Medium" Margin="10"/>
+                                            <Label Grid.Column="1" Text="{Binding amount}" TextColor="Black" FontAttributes="Bold" HeightRequest="50" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontSize="Medium" Margin="10"/>
+                                    </Grid>
+                                </Frame>-->
+                                <Frame>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="white" Padding="5,0,0,0" Margin="5" Spacing="10">
+                                        <Label Text="{Binding category}" TextColor="Black" FontAttributes="Bold" HeightRequest="50" VerticalTextAlignment="Center" FontSize="Medium" Margin="10,0,0,0"/>
+                                        <Label Text="{Binding amount}" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="TapDelete" Tapped="TapDelete_Tapped" CommandParameter="transport"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                                
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+         </ScrollView>
+        <Button x:Name="AddButton" Text="Add" HorizontalOptions="End" VerticalOptions="End" Margin="15" Clicked="AddButton_Clicked" />
+    </Grid>
+</ContentPage>

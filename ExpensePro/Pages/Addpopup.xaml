@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ExpensePro.Pages.Addpopup"
+             CanBeDismissedByTappingOutsideOfPopup="False">
+    <VerticalStackLayout BackgroundColor="white" Padding="20" Spacing="20">
+        <Label 
+            Text="Sample popup message"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="ExpenseTitle" Placeholder="Expense title"/>
+        <Entry x:Name="Amount" Keyboard="Numeric" Placeholder="Amount" />
+        <Button x:Name="OKButton" Text="Add" Clicked="OKButton_Clicked" HorizontalOptions="End" />
+    </VerticalStackLayout>
+</toolkit:Popup>
+
